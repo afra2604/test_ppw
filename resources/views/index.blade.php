@@ -28,29 +28,25 @@
     <div class="container bg-white mt-10 mb-4 p-4 rounded-lg shadow-md">
         <div class="flex justify-between items-center">
             <a href="{{ route('buku.create') }}" class="btn btn-primary"
-            style="background-color: #04364A; color: white; font-weight: bold;" >Tambah Buku </i></a>
+            style="background-color: #ea638c; color: white; font-weight: bold;" >Tambah Buku </i></a>
 
             <form action="{{ route('buku.search') }}" method="get" class="flex items-center">
                 @csrf
                 <input type="text" name="kata" class="form-control rounded" placeholder="Cari ....."
                 style="width: 100%; display: inline; margin-top: 10px; margin-bottom: 10px; float: right;">
-                <a href="{{ route('buku.search') }}" class="ml-2 btn" style="background-color: #04364A; color:white"><i class="fas fa-search"></i></a>
+                <a href="{{ route('buku.search') }}" class="ml-2 btn" style="background-color: #d264b6; color:white"><i class="fas fa-search"></i></a>
             </form>
         </div>
 
-        <div>
-            <a href="{{ route('buku.myfavourite') }}" class="btn btn-primary"
-                style="background-color: #04364A; color: white; font-weight: bold;" > &nbsp;Buku Favorit&nbsp; </i>
-            </a>
-        </div>
+    
 
         <div align="center"> {{ $data_buku -> links() }}</div>
 
-        <div style="font-size:medium; font-weight: medium;">{{ "Jumlah Buku : " .$jumlah_buku ." buku"}}</div>
+        <div style="margin-top: 10px; font-size:medium; font-weight: medium;">{{ "Jumlah Buku : " .$jumlah_buku ." buku"}}</div>
         <br>
 
-<table class= "table table-bordered"  style="background-color: #0D617D; color: white;">
-    <thead  class="text-center" style="background-color: #04364A;">
+<table class= "table table-bordered"  style="margin-top:20px; background-color: #f49cbb; color: #1b2021;">
+    <thead  class="text-center" style="background-color: #779be7; color: white">
         <tr>
             <th>Id</th>
             <th>Thumbnail</th>
@@ -100,7 +96,7 @@
                 class="btn btn-sm btn-primary"><i class="fas fa-edit"></i>&nbsp; Edit &nbsp;</a>
                 <br><br>
                 <a href="{{ route('buku.detail', $buku->id) }}"
-                class="btn btn-sm btn-primary bg-warning"><i class="fas fa-eye"></i> Detail </a>
+                class="btn btn-sm bg-warning" style="color: white;"><i class="fas fa-eye"></i> Detail </a>
               
             </td>
         </tr>
@@ -118,6 +114,19 @@
             <th> </th>
         </tr>
     </tfoot>
+
+    <div>
+            <a href="{{ route('buku.myfavourite') }}" class="btn btn-primary"
+                style="background-color: #a480cf; color: white; font-weight: bold;" > &nbsp;Buku Favorit&nbsp; </i>
+            </a>
+        </div>
+
+        <div>
+            <a href="{{ route('buku.kategori') }}" class="btn btn-primary"
+                style="margin-top:10px; background-color: #bc00dd; color: white; font-weight: bold;" > &nbsp;Kategori Buku&nbsp; </i>
+            </a>
+        </div>
+
 
 </table>
 </body>

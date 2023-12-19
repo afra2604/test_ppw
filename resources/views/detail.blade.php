@@ -117,7 +117,8 @@
 
             <tr>
                 <td align="right" colspan="2">
-                    <a href="{{ route('buku.addToFavourite', $buku->id) }}" class="btn btn-secondary" style="background-color:#04364A;color:white;">Tambah Ke Favorit </a>
+                    <a href="{{ route('buku.addToFavourite', $buku->id) }}" class="btn btn-secondary" 
+                    style="background-color:#04364A;color:white;">Tambah Ke Favorit </a>
                     <button type="submit" class="btn" style="background-color:#04364A; color: white;">Simpan</button>
                     <a href="/buku" class="btn btn-secondary" style="background-color:#04364A;color:white;">Kembali ke Daftar Buku</a>
                 </td>

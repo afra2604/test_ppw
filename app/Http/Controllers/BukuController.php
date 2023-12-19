@@ -22,6 +22,12 @@ class BukuController extends Controller
         // menghitung jumlah baris
         $jumlah_data = Buku::count();
 
+
+        // menngurutkan rating buku
+        $batas = 5;
+        $data_buku = Buku::orderBy('rating', 'desc')->paginate($batas);
+
+
         // menghitung total harga
         $total_harga = 0;
         foreach ($data_buku as $buku) {
@@ -30,7 +36,7 @@ class BukuController extends Controller
 
         $batas = 5;
         $jumlah_buku = Buku::count();
-        $data_buku = Buku::orderBy('id','desc') -> paginate($batas);
+        // $data_buku = Buku::orderBy('id','desc') -> paginate($batas);
         $no_buku = $batas * ($data_buku -> currentPage() - 1);
 
         // me-return hasilnya menggunakan sebuah view
@@ -230,6 +236,11 @@ class BukuController extends Controller
     public function showFavourite() {
         $addFav = Favourite::all();
         return view('showFav', compact('addFav'));
+    }
+
+    public function addKategori() {
+        $addKategori = Kategori::all();
+        return view('showKategori', compact('addKategori'));
     }
 
 }

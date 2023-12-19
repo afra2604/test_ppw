@@ -21,21 +21,21 @@
 
     <h1 class="font-semibold font-sans text-center text-xl text-gray-800 dark:text-gray-200 leading-tight"
         style="font-weight: bold; color: white;">
-            Buku Favorit
+            Kategori Buku
     </h1>
     <br>
     <table class="table table-bordered" style="font-weight:bold; font-size:medium; color:#1b2021; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
     <thead class="text-center" style="background-color: #f49cbb;" >
     <tr>
+        <th scope="col" class="px-6 py-3">Kategori</th>
         <th scope="col" class="px-6 py-3">Judul Buku</th>
-        <th scope="col" class="px-6 py-3">Penulis</th>
     </tr>
     </thead>
     <tbody class="text-center">
-    @foreach ($addFav as $data_buku)
+    @foreach ($addKategori as $data_buku)
     <tr>
-         <td class="px-6 py-4">{{ $data_buku->judul_buku }}</td>
-         <td class="px-6 py-4">{{ $data_buku->penulis }}</td>
+         <td class="px-6 py-4">{{$}}</td>
+         <td class="px-6 py-4">{{$data_buku->judul_buku}}</td>
         
     </td>
     @endforeach

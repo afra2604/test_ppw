@@ -50,6 +50,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/buku/{id}/myfavourite', [BukuController::class,'addToFavourite'])->name('buku.addToFavourite');
     Route::get('/buku/myfavourite', [BukuController::class,'showFavourite'])-> name('buku.myfavourite');
 
+    Route::get('/buku/{id}/kategori', [BukuController::class,'addToKategori'])->name('buku.addToKategori');
+    Route::get('/buku/kategori', [BukuController::class,'showKategori'])-> name('buku.kategori');
+
     Route::post('/buku/{id}/rating', [BukuController::class,'addRating'])->name('buku.rating');
 
 });

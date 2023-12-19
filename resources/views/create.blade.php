@@ -32,7 +32,7 @@
         </h2>
     </x-slot>
 
-<div class="container mt-5 p-4 rounded-lg shadow-md" style="background-color: #0D617D;">
+<div class="container mt-5 p-4 rounded-lg shadow-md" style="background-color: #779be7;">
     <br>
     <form method="post" action="{{ route('buku.store') }}" enctype="multipart/form-data">
         @csrf
@@ -73,8 +73,8 @@
             </tr> 
             <tr>   
                 <td align="right" colspan="2">
-                    <button type="submit" class="btn" style="background-color:#04364A; color: white;">Simpan</button>
-                    <a href="/buku" class="btn btn-secondary" style=" color:white;">&nbsp; Batal &nbsp;</a>
+                    <button type="submit" class="btn btn-primary" style="color: white;">Simpan</button>
+                    <a href="/buku" class="btn btn-danger" style=" color:white;">&nbsp; Batal &nbsp;</a>
                 </td>
             </tr>
         </table>
